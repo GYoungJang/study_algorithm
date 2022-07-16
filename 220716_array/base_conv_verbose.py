@@ -3,13 +3,13 @@ def base_conv_verbose(x: int, r: int) -> str:
     dstr = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     n = len(str(x))  # 변환하기 전의 자릿수
 
-    print(f'{r:2} | {x:{n}}')
+    print(f'{r:2} | {x:{n}d}')
     while x > 0:
         print('  +' + (n + 2) * '-')
         if x // r:
-            print(f'{r:2} | {x // r:{n}} ··· {x % r}')
+            print(f'{r:2} | {x // r:{n}d} ··· {x % r}')
         else:
-            print(f'     {x // r:{n}} ··· {x % r}')
+            print(f'     {x // r:{n}d} ··· {x % r}')
         d += dstr[x % r]
         x //= r
 
