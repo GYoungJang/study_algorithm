@@ -7,6 +7,12 @@ def seq_search(a: Sequence, key: Any) -> int:
     '''시퀀스 a에서 key와 값이 같은 원소를 선형 검색(while 문)'''
     i = 0
 
+    # while i < n:        n값을 알 수 있으면.. n값 몰라도 되는 보초법이 나으려나..
+    #     if a[i] == key:
+    #         return i
+    #     i += 1
+    # return -1
+
     while True:
         if i == len(a):
             return -1               # 검색에 실패하여 -1을 반환
@@ -32,7 +38,7 @@ if __name__ == '__main__':
         print(f'검색값은 x[{idx}]에 있습니다.')
 
 
-# ----------위으 코드보다 효율적인 코드----------
+# ----------위의 코드보다 효율적인 코드----------
 # for 문으로 작성한 선형 검색 알고리즘
 
 # from typing import Any, Sequence
